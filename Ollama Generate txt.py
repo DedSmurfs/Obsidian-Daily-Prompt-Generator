@@ -20,7 +20,7 @@ if memory_file.exists():
     memory = json.load(memory_file)
 
 txt = Path(reference_file).read_text()
-models = ('gemma4', 'qwen3.5:latest', 'llava', 'llama3')
+models = ('gemma4', 'qwen3.5:latest', 'llava', 'llama3') #Random Model chooser. Placed here are random models I have running in my Ollama instance personally but you can put whatever models you prefer here
 selected_item = random.choice(models)
 first_prompt = (txt)
 data = {
