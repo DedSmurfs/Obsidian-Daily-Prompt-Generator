@@ -45,8 +45,8 @@ if response.status_code == 200:
             memory.append(full_response)
             with memory_path.open("w", encoding="utf-8") as memory_file:
                 json.dump(memory, memory_file, indent=4)
-            with open(filename, "w", encoding="utf-8") as file:
-                file.write(full_response)
+            with open(filename, "a", encoding="utf-8") as file:
+                file.write(full_response + "\n")
             print(f"Successfully saved unique response to {filename}")
         else:
             print("Duplicate response. Generating new one...")
